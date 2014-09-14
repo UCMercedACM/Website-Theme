@@ -13,6 +13,23 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
         height:auto;
     }
 
+    @media(max-width:600px) {
+        .long {
+            display:none;
+        }
+        .short {
+            display:block;
+        }
+    }
+    @media(min-width:600px) {
+        .long {
+            display:block;
+        }
+        .short {
+            display:none;
+        }
+    }
+
 
 // Topbar 
     .topbar {
@@ -34,24 +51,36 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
         .background {
             background: url(http://38.media.tumblr.com/b69af3ed8a74f7df5e374711d1ed886c/tumblr_n7fgnop0bz1st5lhmo1_1280.jpg);
             background-size:cover;
-            height:600px;
+            height:400px;
+
+            @media(min-width:600px) {
+                height:600px;
+            }
         }
 
         .overlay {
             background: rgba(0,0,0,.4);
-            margin-top:-600px;
-            height:600px;
+            margin-top:-400px;
+            height:400px;
+
+            @media(min-width:600px) {
+                margin-top:-600px;
+                height:600px
+            }
+
             padding:50px;
             .intro {
                 color:white;
                 margin:auto;
                 text-align:center;
                 .title {
-                    @media(max-width:1290px){
-                        font-size:1.5em;
+                    font-size:1.5em;
+                    margin-top:50px;
+
+                    @media(min-width:600px){
                         margin-top:100px;
-                    }  
-                    margin-top:200px;    
+                        font-size:36px;
+                    }   
                 }
                 .subtitle {
                     margin:20px;
@@ -65,8 +94,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 
     header {
         height:100px;
+        width:100%;
         background:#fff;
-
+        top:0px;
         .brand {
             height:100%;
             margin-left:20px;
@@ -76,6 +106,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
                 height:100%;
                 width:auto;
                 padding:10px;
+            }
+
+            @media(max-width:600px) {
+                width:250px;
             }
         }
 
@@ -92,13 +126,26 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
             .menu-links {
                 list-style: none;
                 font-size: 2em;
-                li {
-                    float:left;
-                    margin:5px;
-                    padding:25px;
+                @media(min-width:600px) {
+                    li {
+                        float:left;
+                        margin:5px;
+                        padding:25px;
+                    } 
                 }
             } 
             @media(max-width:1290px){
+                display:none;
+                width:100%;
+            }      
+        }
+
+        .menu-toggle {
+            float:right;
+            padding:25px;
+            font-size:30px;
+
+            @media(min-width:1290px){
                 display:none;
             }
         }
