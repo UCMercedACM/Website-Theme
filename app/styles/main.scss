@@ -1,0 +1,78 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+
+
+// General
+
+    img {
+        max-width:100%;
+        height:auto;
+    }
+
+
+// Slider
+
+    .slider {
+        min-height:600px;
+        background: #333;
+        padding:50px;
+
+        .intro {
+            color:white;
+            margin:auto;
+            text-align:center;
+            .title {
+                margin-top:200px;
+            }
+            .subtitle {
+                margin:20px;
+            }
+        }
+    }
+
+
+// Header
+
+    header {
+        height:100px;
+        background:#fff;
+
+        .brand {
+            height:100%;
+            margin-left:20px;
+            float:left;
+            img {
+                height:100%;
+                width:auto;
+                padding:10px;
+            }
+        }
+
+        .menu {
+            float:right;
+            background:#fff;
+            .menu-links {
+                list-style: none;
+                font-size: 2em;
+                li {
+                    float:left;
+                    margin:5px;
+                    padding:25px;
+                }
+            }
+        }
+    }
+
+// Sections
+
+
+// Footer
+
+    footer {
+        min-height: 300px;
+        background:rgba(43,48,60,0.9);
+    }
