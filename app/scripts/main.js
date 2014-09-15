@@ -38,7 +38,8 @@ $(document).ready(function(){
 
 		$('a[href^="#"]').on('click',function (e) {
 		    e.preventDefault();
-
+		    
+		    $(".menu").css("display","none");
 		    var target = this.hash,
 		    $target = $(target);
 
