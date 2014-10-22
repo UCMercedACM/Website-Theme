@@ -7,20 +7,22 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
-    return gulp.src('website/styles/main.scss')
-        .pipe($.rubySass({
+    return gulp.src('website/css/*')
+        /*.pipe($.rubySass({
             style: 'expanded',
             precision: 10
         }))
-        .pipe($.autoprefixer('last 1 version'))
-        .pipe(gulp.dest('.tmp/styles'))
+*/
+        //.pipe($.autoprefixer('last 1 version'))
+        .pipe(gulp.dest('dist/css'))
         .pipe($.size());
 });
 
 gulp.task('scripts', function () {
-    return gulp.src('website/scripts/**/*.js')
-        .pipe($.jshint())
-        .pipe($.jshint.reporter(require('jshint-stylish')))
+    return gulp.src('website/js/**/*.js')
+        //.pipe($.jshint())
+        //.pipe($.jshint.reporter(require('jshint-stylish')))
+        .pipe(gulp.dest('dist/js'))
         .pipe($.size());
 });
 
@@ -102,7 +104,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
 
     gulp.watch([
         'website/*.html',
-        '.tmp/styles/**/*.css',
+        '.tmp/css/**/*.css',
         'website/js/**/*.js',
         'website/img/**/*'
     ]).on('change', function (file) {
