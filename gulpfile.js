@@ -21,7 +21,7 @@ var paths = {
 // fileinclude: grab partials from templates and render out html files
 // ==========================================
 gulp.task('fileinclude', function() {
-  return  gulp.src(path.join(paths.templates, '*.tpl.html'))
+  return  gulp.src(path.join(paths.templates, '**/*.tpl.html'))
     .pipe(fileinclude())
     .pipe(rename({
       extname: ""
