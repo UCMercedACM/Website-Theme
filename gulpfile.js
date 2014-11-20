@@ -47,11 +47,19 @@ gulp.task('sass', function() {
  
 // Assets: copy any remaining assets like JS that we want
 //===========================================
-gulp.task('copy', function(){
+gulp.task('copyassets', function(){
   gulp.src('./src/assets/**')
     .pipe(gulp.dest('./dist/assets'));
 });
 
+// Scripts: copy any php scripts
+//===========================================
+gulp.task('copyscripts', function(){
+  gulp.src('./src/scripts/**')
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('copy', ['copyassets','copyscripts'], function() {});
  
 //  Connect: sever task
 //===========================================
@@ -90,15 +98,11 @@ function watchStuff(task) {
 //  Watch and Livereload using Libsass
 //===========================================
 gulp.task('watch', function() {
- 
- watchStuff('sass');
- 
+	watchStuff('sass');
 });
  
  
 //  Default Gulp Task
 //===========================================
-gulp.task('default', ['fileinclude', 'sass', 'copy', 'connect', 'watch'], function() {
- 
-});
+gulp.task('default', ['fileinclude', 'sass', 'copy', 'connect', 'watch'], function() {});
  
