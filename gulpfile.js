@@ -48,8 +48,8 @@ gulp.task('sass', function() {
 // Assets: copy any remaining assets like JS that we want
 //===========================================
 gulp.task('copy', function(){
-  gulp.src('./src/website/assets/**')
-    .pipe(gulp.dest('dist/assets'));
+  gulp.src('./src/assets/**')
+    .pipe(gulp.dest('./dist/assets'));
 });
 
  
@@ -59,7 +59,7 @@ gulp.task('connect', function() {
   connect.server({
     port: 9000,
     root: [__dirname] + "/dist/",
-    livereload: false
+    livereload: true
   });
 });
  
@@ -75,7 +75,11 @@ function watchStuff(task) {
     gulp.watch(path.join(paths.sass, '**/*.scss'), [task]);
  
     // watch task for gulp-includes
-    gulp.watch(path.join(paths.templates, '**/*.html'), ['fileinclude']);
+    gulp.watch('./src/templates/**', ['fileinclude']);
+    gulp.watch('./src/website/**', ['fileinclude']);
+
+    // watch task for assets
+    gulp.watch('./src/assets/**', ['copy']);
 
     //Watch task for gulp
     gulp.watch('gulpfile.js', [task]);
@@ -94,7 +98,7 @@ gulp.task('watch', function() {
  
 //  Default Gulp Task
 //===========================================
-gulp.task('default', ['fileinclude', 'sass', 'connect', 'watch'], function() {
+gulp.task('default', ['fileinclude', 'sass', 'copy', 'connect', 'watch'], function() {
  
 });
  
