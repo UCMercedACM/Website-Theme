@@ -1,4 +1,4 @@
- @@include('../../../templates/header.tpl.html')
+@@include('../../templates/header.tpl.html')
 <!--page-->
 <div id="banner">
     <div class="container intro_wrapper">
@@ -75,4 +75,27 @@
     </div>
 </div>
 <!--//page-->
-@@include('../../../templates/footer.tpl.html')
+
+<!--footer-->
+<div id="footer2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright">
+                    FLATI &copy;
+                    <script type="text/javascript">
+                    //<![CDATA[
+                    var d = new Date()
+                    document.write(d.getFullYear())
+                        //]]>
+                    </script>
+                    - All Rights Reserved : Template by <a href="http://spiralpixel.com">Spiral Pixel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- up to top -->
+<a href="#"><i class="go-top fa fa-angle-double-up"></i></a>
+<!--//end-->
+@@include('../../templates/footer.tpl.html')
