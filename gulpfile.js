@@ -31,7 +31,6 @@ gulp.task('fileinclude', function() {
      }))
     .pipe(gulp.dest('./dist'))
     .pipe(livereload(server))
-    .pipe(notify({ message: 'Includes: included' }));
 });
  
 //  Sass: compile sass to css task - uses Libsass
