@@ -1810,23 +1810,5 @@ span.nav-close:before { color: #555; }
 .slideshow nav span.nav-prev, .slideshow nav span.nav-next { display: none; }
 }
 
-.logo {
-	width:200px;
-	position:absolute;
-	left:50px;
-	top:7px;
-}
-
-
-@media(max-width:1000px){
-	.logo {
-		width: 100px;
-		left: 20px;
-		top: 30px;
-		margin:0px !important;
-	}
-}
-
-
 
 
