@@ -112,5 +112,5 @@ gulp.task("open", function(){
  
 //  Default Gulp Task
 //===========================================
-gulp.task('default', ['fileinclude', 'sass', 'copy', 'connect','open', 'watch'], function() {});
+gulp.task('default', ['fileinclude', 'sass', 'copy', 'connect', 'watch','open'], function() {});
  
