@@ -20,7 +20,7 @@
 
 			<!--col 1-->
 			<div class="col-md-9 pad25">
-				<iframe src="http://ucm.acm.org/blag/" style="width:100%;min-height:2500px;"></iframe>
+				<iframe src="http://ucm.acm.org/blag/" style="width:100%;min-height:1000px;" id="iframe1" marginheight="0" frameborder="0" onLoad="autoResize('iframe1');"></iframe>
 			</div>
 			<!--end post-->
 
@@ -94,5 +94,20 @@
 	</div>
 </div>
 <div class="pad45 hidden-md hidden-lg"></div>
+<script language="JavaScript">
+function autoResize(id){
+    var newheight;
+    var newwidth;
+
+    if(document.getElementById){
+        newheight=document.getElementById(id).contentWindow.document.body.scrollHeight;
+        newwidth=document.getElementById(id).contentWindow.document.body.scrollWidth;
+    }
+
+    document.getElementById(id).height= (newheight) + "px";
+    document.getElementById(id).width= (newwidth) + "px";
+}
+</script>
+
 <!--end-->
 @@include('../../templates/footer.tpl.html')
