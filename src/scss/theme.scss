@@ -1814,5 +1814,9 @@ span.nav-close:before { color: #555; }
 .slideshow nav span.nav-prev, .slideshow nav span.nav-next { display: none; }
 }
 
+iframe html {
+	overflow:hidden;
+}
+
 
 
