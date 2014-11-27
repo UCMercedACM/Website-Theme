@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     server = lr(),
     path = require("path");
+    open = require("gulp-open");
  
 var paths = {
   templates: './src/website',
@@ -99,9 +100,17 @@ function watchStuff(task) {
 gulp.task('watch', function() {
 	watchStuff('sass');
 });
+
+gulp.task("open", function(){
+  var options = {
+    url: "http://localhost:9000",
+  };
+  gulp.src("./dist/index.html")
+  .pipe(open("", options));
+});
  
  
 //  Default Gulp Task
 //===========================================
-gulp.task('default', ['fileinclude', 'sass', 'copy', 'connect', 'watch'], function() {});
+gulp.task('default', ['fileinclude', 'sass', 'copy', 'connect','open', 'watch'], function() {});
  
