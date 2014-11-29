@@ -1,4 +1,7 @@
 @@include('../../templates/header.tpl.html')
+
+
+
 <!--page-->
 
 <div id="banner">
@@ -52,12 +55,12 @@
                         <form id="ajax-contact-form">
                             <p class="form_info">name <span class="required">*</span>
                             </p>
-                            <input class="col-xs-12 col-sm-12 col-md-8" type="text" name="name" value="" />
+                            <input class="col-xs-12 col-sm-12 col-md-8" type="text" name="name" id="name" value="" />
                             <p class="form_info">email <span class="required">*</span>
                             </p>
-                            <input class="col-xs-12 col-sm-12 col-md-8" type="text" name="email" value="" />
+                            <input class="col-xs-12 col-sm-12 col-md-8" type="text" name="email" id="email" value="" />
                             <p class="form_info">subject</p>
-                            <input class="col-xs-12 col-sm-12 col-md-8" type="text" name="subject" value="" />
+                            <input class="col-xs-12 col-sm-12 col-md-8" type="text" name="subject" id="subject" value="" />
                             <br>
                             <p class="form_info">message</p>
                             <textarea name="message" id="message" class="col-xs-12 col-sm-12 col-md-12"></textarea>
@@ -74,6 +77,18 @@
     </div>
 </div>
 <!--//page-->
+
+<!--SCRIPT: Allow populate fields in this page by URL and IDs. Example: to prefill name with
+"Derpy Hooves," use $MAIN_PAGE_URL/contact/#name=Derpy%20Hooves -->
+
+<script>
+var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+for(var i = 0; i < hashParams.length; i++){
+				   var p = hashParams[i].split('=');
+				   document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
+}
+ </script>
+
 
 <!--footer-->
 <div id="footer2">
@@ -98,3 +113,4 @@
 <a href="#"><i class="go-top fa fa-angle-double-up"></i></a>
 <!--//end-->
 @@include('../../templates/footer.tpl.html')
+
