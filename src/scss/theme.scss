@@ -1235,7 +1235,9 @@ span.nav-close:before { content: "\f00d"; }
 	-webkit-border-radius: 0px 0px 4px 4px;
     -moz-border-radius: 0px 0px 4px 4px;
    	border-radius: 0px 0px 4px 4px;
+	min-height: 145px;
 }
+
 .slider-title:after {
 	top:100%;
 	border: solid transparent;
@@ -1243,6 +1245,7 @@ span.nav-close:before { content: "\f00d"; }
 	height: 0; width: 0;
 	position: absolute;
 	pointer-events: none;
+	min-height: 145px;
 }
 .slider-title:after { border-width: 6px; left: 47%; }
 .slider-title h3 { font-size: 12px; letter-spacing:0.1em; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;}
