@@ -495,6 +495,12 @@ a.nivo-prevNav { right: 33px; }
     top: -4px;
     width: 82px;
 }
+@media (min-width: 992px) {
+    .tile.tile-frontpage{
+        min-height:330px
+    }
+}
+
 .tile p { margin: 10px 0 22px 0;  font: 13px/22px 'Lato', sans-serif;}
 .tile-image { height: 100px; margin: 25px 0 15px; vertical-align: bottom; }
 .tile-title { font-size: 18px; margin: 0; }
@@ -1229,7 +1235,9 @@ span.nav-close:before { content: "\f00d"; }
 	-webkit-border-radius: 0px 0px 4px 4px;
     -moz-border-radius: 0px 0px 4px 4px;
    	border-radius: 0px 0px 4px 4px;
+	min-height: 145px;
 }
+
 .slider-title:after {
 	top:100%;
 	border: solid transparent;
@@ -1237,6 +1245,7 @@ span.nav-close:before { content: "\f00d"; }
 	height: 0; width: 0;
 	position: absolute;
 	pointer-events: none;
+	min-height: 145px;
 }
 .slider-title:after { border-width: 6px; left: 47%; }
 .slider-title h3 { font-size: 12px; letter-spacing:0.1em; font-weight: 700; text-transform: uppercase; margin-bottom: 2px;}
