@@ -26,12 +26,24 @@ if [ ! -d dist ]; then
 	exit 4
 fi
 
-printf "This script is meant to deploy the UCMACM Webpage.\n"
-printf "The current path to the Deployment folder is:\n\n\t %s\n\n" $DEPLOY_PATH
-printf "To change it, rerun this script with the path as the first argument.\n"
-printf "Continue? [Y/n] "
+if [ $(git rev-parse --abbrev-ref HEAD) != "master" ]; then
+	printf "\n##########! ! ! ! ! ! ! WARNING ! ! ! ! ! ! !############\n\n"
+	printf "Hey dodo-brain, you're not on the master branch!\n"
+	printf "Did you read the instructions for deploying??\n"
+	printf "I'm letting you go with a warning this time, since\n"
+	printf "It's possible you know what you're doing, but remember\n"
+	printf "that deploys are supposed to come from master\n"
 
-#Shitty shit user input handling :(
+	
+	printf "\n##########! ! ! ! ! ! ! WARNING ! ! ! ! ! ! !############\n"
+else
+	printf "This script is meant to deploy the UCMACM Webpage.\n"
+	printf "The current path to the Deployment folder is:\n\n\t %s\n\n" $DEPLOY_PATH
+	printf "To change it, rerun this script with the path as the first argument.\n"
+fi
+printf "\n Continue? [Y/n] "
+
+#Shitty shit user input handling
 
 read USR_INPT_1
 
