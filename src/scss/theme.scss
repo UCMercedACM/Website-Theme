@@ -585,12 +585,12 @@ a.nivo-prevNav { right: 33px; }
     transition: all 0.5s ease-in-out; 
 }
 .team_sections { display: block; padding: 15px 5px; text-align: center; }
-.team_bio{ width: 80%; text-align: center; margin: 0 auto; }
+.team_bio{ width: 80%; text-align: center; margin: 0 auto; height: 150px; }
 hr.team-line {  
 	border: 0;
-	background: url(../img/lines.png) repeat; 
+	background: url(../assets/img/lines.png) repeat; 
     height: 10px;
-	width: 160px;
+	width: 70%;
 	margin: 25px auto 25px;
 } 
 
