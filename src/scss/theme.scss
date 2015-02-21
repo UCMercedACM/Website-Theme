@@ -304,6 +304,19 @@ h1.intro {  line-height: 40px; font-weight: 300;}
     border-radius: 4px;
 	line-height: 0px;
 }
+.navbar-submenu-toggle {
+	position: absolute;
+	top: 10px;
+	right: 18px;
+	font-size: 10px;
+	border: 0px;
+	width: 23px;
+	height: 23px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	line-height: 0px;
+}
 .nav-collapse .nav>li>a:hover, .nav-collapse .nav>li>a:focus, .nav-collapse .dropdown-menu a:hover, .nav-collapse .dropdown-menu a:focus{
 background-color: transparent;  }
 .navbar-collapse.in { overflow-y: visible; }
