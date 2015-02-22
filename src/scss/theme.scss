@@ -317,6 +317,11 @@ h1.intro {  line-height: 40px; font-weight: 300;}
 	border-radius: 2px;
 	line-height: 0px;
 }
+@media (min-width: 768px) {
+	.navbar-submenu-toggle {
+		display: none;
+	}
+}
 .nav-collapse .nav>li>a:hover, .nav-collapse .nav>li>a:focus, .nav-collapse .dropdown-menu a:hover, .nav-collapse .dropdown-menu a:focus{
 background-color: transparent;  }
 .navbar-collapse.in { overflow-y: visible; }
