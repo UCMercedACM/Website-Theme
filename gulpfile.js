@@ -33,6 +33,18 @@ gulp.task('fileinclude', function() {
     .pipe(gulp.dest('./dist'))
     .pipe(livereload(server))
 });
+gulp.task('fileinclude', function() {
+  return  gulp.src(path.join(paths.templates, '**/*.tpl.php'))
+    .pipe(fileinclude())
+    .pipe(rename({
+      extname: ""
+     }))
+    .pipe(rename({
+      extname: ".php"
+     }))
+    .pipe(gulp.dest('./dist'))
+    .pipe(livereload(server))
+});
  
 //  Sass: compile sass to css task - uses Libsass
 //===========================================
