@@ -1,0 +1,87 @@
+@@include('../../templates/header.tpl.html')
+
+
+
+<!--page-->
+
+<div id="banner">
+    <div class="container intro_wrapper">
+        <div class="inner_content">
+            <h1 class="title">UC Merced ACM Privacy Statement</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container wrapper pad10">
+    <div class="inner_content">
+        <div class="row pad10">
+            <div class="col-sm-6 col-md-4">
+                <h2 style="text-align: center;">PRIVACY POLICY MODEL FOR MOBILE APPLICATIONS</h2> 
+<p></p> 
+<p>This privacy policy governs your use of the software applications:
+<ul>
+UC Merced ShipRunner<br>
+UC Merced FlappyBanana <br>
+UC Merced Fly Swatter <br>
+UC Merced astonishing bird <br>
+UC Merced Flappy Cat <br>
+UC Merced Uh... <br>
+UC Merced Dont touch the background <br>
+UC Merced Space Breaker <br>
+UC Merced Monster Rave <br>
+UC Merced miraculous bubbles <br>
+UC Merced Really Special <br>
+UC Merced Devil Bird <br>
+</ul>
+App Name ("Applications") for mobile devices that was created by&nbsp;ACM at UC Merced.&nbsp;The Applications are simple touch screen based arcade games.</p>
+<h4><strong>Information Collection</strong></h4> 
+
+<p>Our Applications do not collect any information. Our Applications do not collect nor use any geographical information. Consequently, third parties have no access to any information in our Applications</p>
+<h4><strong>Changes</strong></h4> 
+<p>This Privacy Policy may be updated from time to time for any reason. We will notify you of any changes to our Privacy Policy by posting the new Privacy Policy&nbsp;here&nbsp;and&nbsp;informing you via email or text message. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes. You can check the history of this policy by clicking here.</p>
+<h4><strong>Your Consent</strong></h4> 
+<p>By using the Application, you are consenting to our processing of your information as set forth in this Privacy Policy now and as amended by us. &quot;Processing&quot; means using cookies on a computer/hand held device or using or touching information in any way, including, but not limited to, collecting, storing, deleting, using, combining and disclosing information, all of which activities will take place in the United States. If you reside outside the United States&nbsp;your information will be transferred, processed and stored there under United States&nbsp;privacy standards.&nbsp;</p>
+<h4>Contact us</h4> 
+<p>If you have any questions regarding privacy while using the Application, or have questions about our practices, please contact us via email at&nbsp;acm@ucmerced.com.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//page-->
+
+<!--SCRIPT: Allow populate fields in this page by URL and IDs. Example: to prefill name with
+"Derpy Hooves," use $MAIN_PAGE_URL/contact/#name=Derpy%20Hooves -->
+
+<script>
+var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+for(var i = 0; i < hashParams.length; i++){
+				   var p = hashParams[i].split('=');
+				   document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
+}
+ </script>
+
+
+<!--footer-->
+<div id="footer2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright">
+                    FLATI &copy;
+                    <script type="text/javascript">
+                    //<![CDATA[
+                    var d = new Date()
+                    document.write(d.getFullYear())
+                        //]]>
+                    </script>
+                    - All Rights Reserved : Template by <a href="http://spiralpixel.com">Spiral Pixel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- up to top -->
+<a href="#"><i class="go-top fa fa-angle-double-up"></i></a>
+<!--//end-->
+@@include('../../templates/footer.tpl.html')
+
